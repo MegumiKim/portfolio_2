@@ -1,41 +1,40 @@
-<div class="welcome__container">
-	<div class="logos">
-		<div class="logos__blur" />
-		<img class="logos__entry" src="/svelte.svg" alt="Svelte Logo" />
-		<span class="logos__plus">+</span>
-		<img class="logos__entry" src="/sanity.svg" alt="Sanity Logo" />
+
+<section class="text-white welcome__container p-0 bg ">
+	<div class="absolute bg-transparent top-[25%] lg:max-w-[50%] mx-8 text-center">
+		<h1 class=" text-6xl font-extbold mb-5">Megumi Kimura</h1>
+		<p class="serif-text font-extralight ">Junior Frontend Developer based in Oslo.
+					<br>Driven by the passion for crafting user friendly interfaces, I am on the lookout for the next coding adventure.</p>
+					<div class="flex flex-row gap-5 text-xl justify-center mt-5">
+						<a href="/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="/"><i class="fa-brands fa-github"></i></a>
+						<a href="/"><i class="fa-solid fa-envelope"></i></a>
+					</div>
 	</div>
-	<div class="steps">
-		<h2 class="steps__title">Next steps</h2>
-		<ul class="steps__list">
-			<li class="steps__entry">
-				<h3 class="steps__subtitle">Publish a post in your Studio</h3>
-				<p class="steps__text">Visit the Sanity Studio and publish a new document of type post.</p>
-			</li>
-			<li class="steps__entry">
-				<h3 class="step__title">Dive into the documentation</h3>
-				<p class="steps__text">
-					Check out{' '}
-					<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.sanity.io/docs">
-						the documentation
-					</a>{' '}
-					to learn more about Sanity.
-				</p>
-			</li>
-			<li class="steps__entry">
-				<h3 class="steps__subtitle">Join the Sanity Community</h3>
-				<p class="steps__text">
-					Leverage{' '}
-					<a
-						target="_blank"
-						rel="noopener noreferrer nofollow"
-						href="https://www.sanity.io/exchange/community"
-					>
-						our awesome community
-					</a>
-					, and share tips and discuss!
-				</p>
-			</li>
-		</ul>
-	</div>
-</div>
+
+</section>
+
+<style>
+
+		/* h1, p{
+			text-shadow: 0px 1px 5px rgb(13, 5, 5);
+		} */
+		
+	
+		/* Specific styles for the background image */
+		.bg{
+			position: absolute;
+    content: "";
+		height: 100%;
+		width: 100%;
+    background-image: url('/aurora.jpg');
+		background-position-y: bottom;
+		/* background-position-x: center; */
+    background-size: cover;
+    opacity: 1; 
+		z-index: -10;
+  }
+
+
+
+
+</style>
