@@ -8,5 +8,8 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/app.html" }
-  ]
+  ],
+  "dependencies": {
+    "@sveltejs/adapter-static": "commonjs:@sveltejs/adapter-static"
+  }
 }
