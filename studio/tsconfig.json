@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,12 +15,10 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "includes": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "includes": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+  // "baseUrl": "./",
+  // "paths": {
+  //   "dotenv/*": ["./node_modules/dotenv/*"]
+  // }
 }

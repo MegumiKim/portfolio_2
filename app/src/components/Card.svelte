@@ -11,7 +11,7 @@ import type {Project} from "../types/Project"
 	
 </script>
 
-<div class="flex flex-col rounded-lg w-full h-full mx-auto relative card">
+<a href={`/project/${data.slug}`} class="flex flex-col rounded-lg w-full h-full mx-auto relative card">
 <img class="w-full h-full overflow-hidden object-cover" src={data.image} alt={data.name}>
 <div class="">
 
@@ -28,7 +28,7 @@ import type {Project} from "../types/Project"
 
 	</div>
 
-</div>
+</a>
 
 <style>
 	.card{
@@ -63,6 +63,6 @@ import type {Project} from "../types/Project"
 }
 
 img{
-aspect-ratio: auto 500 / 500;;
+aspect-ratio: auto 500 / 500;
 }
 </style>

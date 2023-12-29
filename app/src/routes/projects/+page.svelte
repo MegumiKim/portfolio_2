@@ -1,11 +1,11 @@
 <script lang="ts">
 import Card from '../../components/Card.svelte';
-	import type { PageData } from './$types';
-  import { getPosts } from '$lib/utils/sanity';
+import type { PageData } from './$types';
+import { getPosts } from '$lib/utils/sanity';
 import { error } from '@sveltejs/kit';
-	import { onMount } from 'svelte';
-  import {getProjects} from "../../sanity/sanity-utils"
-	import type { Project } from '../../types/Project';
+import { onMount } from 'svelte';
+import {getProjects} from "../../sanity/sanity-utils"
+import type { Project } from '../../types/Project';
 
 export let projects:Project[] = [];
 
