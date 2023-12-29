@@ -1,7 +1,8 @@
 import { createClient } from "@sanity/client";
-import type { Project } from "../types/Project";
+// import type { Project } from "../types/Project";
 import groq from "groq";
 import { PUBLIC_SANITY_DATASET, PUBLIC_SANITY_PROJECT_ID } from '$env/static/public';
+import type { PortableTextBlock } from "sanity";
 
 export const client = createClient({
 	projectId: PUBLIC_SANITY_PROJECT_ID,
@@ -25,13 +26,27 @@ export async function getProjects(): Promise<Project[]> {
   }`
   );
 }
+export async function getProject(slug:string): Promise<Project> {
+  return await client.fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
+      'image':image.asset->url,
+        stack,
+        body, 
+        url,
+        name,
+        _id
+      
+    }`,{slug}
+  );
+}
 
-// groq`*[_type == 'project']{
-//   _id,
-//   _createdAt,
-//   title,
-//   "slug":slug.current,
-//   'image':image.asset->url,
-//   url,
-//   content
-// }`
+export type Project = {
+  name: string;
+  image: string;
+  stack:[],
+ _id: string;
+ _createdAt: Date;
+ slug: string;
+ url: string;
+ body: PortableTextBlock[];
+};

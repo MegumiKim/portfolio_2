@@ -18,9 +18,9 @@ function toggleMenu(){
   <nav class="ml-4 gap-2 justify-center sm:gap-7 {showMenu? 'flex flex-col': 'hidden'} sm:flex sm:flex-row sm:m-auto">
     <a class=" text-white hover:text-yellow-500" href="/">HOME</a>
     <a class=" text-white hover:text-yellow-500" href="/projects">PROJECTS</a>
-    <a class=" text-white hover:text-yellow-500" href="/">ABOUT</a>
-    <a class=" text-white hover:text-yellow-500" href="/">CV</a>
+    <a class=" text-white hover:text-yellow-500" href="/about">ABOUT</a>
     <a class=" text-white hover:text-yellow-500" href="/contact">CONTACT</a>
+    <a class=" text-white hover:text-yellow-500" href="https://cv.megumi.no/" >CV</a>
   </nav>
 </header>
 

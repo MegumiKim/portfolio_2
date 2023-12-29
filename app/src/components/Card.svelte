@@ -7,7 +7,7 @@
 import type {Project} from "../types/Project"
 
 	export let data: Project;
-	console.log(data);
+	// console.log(data);
 	
 </script>
 

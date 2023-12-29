@@ -1,8 +1,5 @@
 <script lang="ts">
 import Card from '../../components/Card.svelte';
-import type { PageData } from './$types';
-import { getPosts } from '$lib/utils/sanity';
-import { error } from '@sveltejs/kit';
 import { onMount } from 'svelte';
 import {getProjects} from "../../sanity/sanity-utils"
 import type { Project } from '../../types/Project';
@@ -24,11 +21,8 @@ onMount(async () => {
 </script>
 
 
-<div class="container mx-auto p-8 space-y-8 h-full mt-40 max-w-screen-xl">
-	<h1 class="h1">My Projects</h1>
-
-
-	<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+<div class="container mx-auto p-8 space-y-8 h-full mt-40 max-w-screen-lg">
+	<h1 class="h1">Latest Projects</h1>
 	<section>
 {#if projects.length > 0}
   <div class="grid md:grid-cols-2 grid-rows-4 gap-6">

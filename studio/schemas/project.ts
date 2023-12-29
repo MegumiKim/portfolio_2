@@ -24,6 +24,11 @@ export const project = {
       type: 'url',
     },
     {
+      name: 'gitHub',
+      title: 'GitHub Link',
+      type: 'url',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
