@@ -33,6 +33,7 @@ export async function getProject(slug:string): Promise<Project> {
         stack,
         body, 
         url,
+        gitHub,
         name,
         _id
       

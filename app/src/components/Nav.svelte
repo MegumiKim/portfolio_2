@@ -7,7 +7,7 @@ function toggleMenu(){
 
 </script>
 
-<header class="text-white bg-transparent absolute top-8 w-full align-middle">
+<div class="text-white bg-transparent absolute top-8 w-full align-middle">
   <button on:click={toggleMenu} class="mx-4 sm:hidden">
     {#if showMenu}
     <i class="fa-solid fa-xmark"></i>
@@ -22,7 +22,7 @@ function toggleMenu(){
     <a class=" text-white hover:text-yellow-500" href="/contact">CONTACT</a>
     <a class=" text-white hover:text-yellow-500" href="https://cv.megumi.no/" >CV</a>
   </nav>
-</header>
+</div>
 
 <style>
   /* 

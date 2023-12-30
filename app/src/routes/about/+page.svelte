@@ -2,7 +2,7 @@
   <h1 class="h1">About me</h1>
   <div class="sm:flex gap-5">
     <img src="/profile.jpg" alt="profile" class="max-w-[200px]">
-    <p class="max-w-xl">A recent graduate in web development and a frontend enthusiast based in Oslo. Driven by the passion for crafting user friendly interfaces, I am on the lookout for the next coding adventure.</p>
+    <p class="max-w-xl">Born and raised in Japan, studied and worked in Belgium/India/Japan/Norway, I am a multicultural and multidisciplinary person with zen in mind. Besides programming, I play saxophone 🎷 and train capoeira (martial art) 🤸‍♀️ in my free time.</p>
   </div>
 
   <section class="">
