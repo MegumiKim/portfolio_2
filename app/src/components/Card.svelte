@@ -1,8 +1,4 @@
 <script lang="ts">
-	// import { formatDate } from '$lib/utils';
-	// import { urlFor } from '$lib/utils/image';
-	// import type { Post } from '$lib/utils/sanity';
-
 
 import type {Project} from "../types/Project"
 
@@ -17,10 +13,10 @@ import type {Project} from "../types/Project"
 
 </div>
 	<div class="card-text">
-		<div class="card-title text-4xl font-extrabold mb-4">{data.name}</div>
-    <div class="flex gap-2 flex-wrap">
+		<div class="card-title text-2xl sm:text-4xl font-extrabold mb-4">{data.name}</div>
+    <div class="hidden sm:flex gap-2 flex-wrap">
 			{#if data.stack?.length}
-			{#each data.stack as stack (stack)}
+			{#each data.stack as stack }
 				<p class="variant-filled-tertiary btn-sm rounded-xl">{stack}</p>
 			{/each}
 			{/if}
@@ -35,12 +31,7 @@ import type {Project} from "../types/Project"
     position: relative;
     cursor: pointer;
 		padding: 0;
-    /* object-fit: cover; */
-    /* background-position: center center;
-    background-repeat: no-repeat; */
     overflow: hidden;
-    /* display: flex;
-    align-items: flex-end; */
     border-radius: 9px;
 		border-style: none;
 	}
@@ -58,8 +49,6 @@ import type {Project} from "../types/Project"
 	bottom: 0;
 	z-index: 999 !important;
 	padding: 2rem;
-/* transform: none !important; */
-    /* opacity: 1 !important; */
 }
 
 img{
