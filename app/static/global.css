@@ -170,9 +170,9 @@ body {
 	margin: 0 auto;
 }
 
-main {
+/* main {
 	margin-top: 45px;
-}
+} */
 
 .header {
 	display: flex;
@@ -218,7 +218,7 @@ main {
 	}
 
 	main {
-		margin-top: unset;
+		/* margin-top: unset; */
 	}
 
 	.header {

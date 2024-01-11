@@ -12,15 +12,15 @@ function toggleMenu(){
     {#if showMenu}
     <i class="fa-solid fa-xmark"></i>
   {:else}
-    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-bars text-2xl"></i>
   {/if}
   </button>
-  <nav class="ml-4 gap-2 justify-center sm:gap-7 {showMenu? 'flex flex-col': 'hidden'} sm:flex sm:flex-row sm:m-auto">
+  <nav class="ml-4 gap-2 justify-center sm:gap-7 {showMenu? 'flex flex-col bg-slate-900 p-5': 'hidden'} sm:flex sm:flex-row sm:m-auto">
     <a class=" text-white hover:text-yellow-500" href="/">HOME</a>
     <a class=" text-white hover:text-yellow-500" href="/projects">PROJECTS</a>
     <!-- <a class=" text-white hover:text-yellow-500" href="/about">ABOUT</a> -->
     <a class=" text-white hover:text-yellow-500" href="/contact">CONTACT</a>
-    <a class=" text-white hover:text-yellow-500" href="https://cv.megumi.no/" >CV</a>
+    <a class=" text-white hover:text-yellow-500" href="https://cv.megumi.no/" target="_blank">CV</a>
   </nav>
 </div>
 

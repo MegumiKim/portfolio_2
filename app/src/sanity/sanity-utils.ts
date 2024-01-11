@@ -49,5 +49,6 @@ export type Project = {
  _createdAt: Date;
  slug: string;
  url: string;
+ gitHub?: string;
  body: PortableTextBlock[];
 };

@@ -21,11 +21,11 @@ onMount(async () => {
 </script>
 
 
-<div class="container mx-auto p-8 space-y-8 mt-40 max-w-screen-lg">
+<div class="mx-auto p-8 space-y-8 mt-40 max-w-screen-lg">
 	<h1 class="h1">Latest Projects</h1>
 	<section>
 {#if projects.length > 0}
-  <div class="grid md:grid-cols-2 grid-rows-4 gap-6">
+  <div class="grid md:grid-cols-2 gap-6">
     {#each projects as project (project._id)}
       <Card data={project}/>
     {/each}

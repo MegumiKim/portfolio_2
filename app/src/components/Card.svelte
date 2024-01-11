@@ -13,7 +13,7 @@ import type {Project} from "../types/Project"
 
 </div>
 	<div class="card-text">
-		<div class="card-title text-2xl sm:text-4xl font-extrabold mb-4">{data.name}</div>
+		<!-- <div class="card-title text-2xl sm:text-4xl font-extrabold mb-4">{data.name}</div> -->
     <div class="hidden sm:flex gap-2 flex-wrap">
 			{#if data.stack?.length}
 			{#each data.stack as stack }

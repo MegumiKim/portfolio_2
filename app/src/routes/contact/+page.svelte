@@ -1,4 +1,4 @@
-<div class="container mx-auto p-8 space-y-8 h-[92vh] mt-32 max-w-screen-lg">
+<div class="container mx-auto p-8 space-y-8 mt-32 max-w-screen-lg">
 <h1 class="h1 mb-10">Get in touch</h1>
 
   <div class="sm:flex gap-10">
