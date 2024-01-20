@@ -29,6 +29,12 @@ export const project = {
       type: 'url',
     },
     {
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      rows: 4,
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

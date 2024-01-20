@@ -20,9 +20,7 @@ export async function getProjects(): Promise<Project[]> {
       name,
       "slug":slug.current,
       'image':image.asset->url,
-      url,   
-      stack,
-      body
+      excerpt
   }`
   );
 }
@@ -31,6 +29,7 @@ export async function getProject(slug:string): Promise<Project> {
     groq`*[_type == "project" && slug.current == $slug][0]{
       'image':image.asset->url,
         stack,
+        excerpt,
         body, 
         url,
         gitHub,
@@ -44,6 +43,7 @@ export async function getProject(slug:string): Promise<Project> {
 export type Project = {
   name: string;
   image: string;
+  excerpt:string;
   stack:[],
  _id: string;
  _createdAt: Date;

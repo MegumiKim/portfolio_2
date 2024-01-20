@@ -8,7 +8,7 @@
 	<header class="flex justify-between ">
 		<Nav />
 	</header>
-	<main class="">
+	<main class="overflow-hidden">
 		<slot />
 	</main>
 	<footer class=" text-slate-400 align-middle text-center flex flex-col py-5 mt-10">

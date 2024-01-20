@@ -7,21 +7,14 @@ import type {Project} from "../types/Project"
 	
 </script>
 
-<a href={`/project/${data.slug}`} class="flex flex-col rounded-lg w-full h-full mx-auto relative card">
+<a href={`/project/${data.slug}`} class="flex flex-col rounded-lg w-full aspect-[3/2] mx-auto relative card">
 <img class="w-full h-full overflow-hidden object-cover" src={data.image} alt={data.name}>
 <div class="">
 
 </div>
-	<div class="card-text">
-		<!-- <div class="card-title text-2xl sm:text-4xl font-extrabold mb-4">{data.name}</div> -->
-    <div class="hidden sm:flex gap-2 flex-wrap">
-			{#if data.stack?.length}
-			{#each data.stack as stack }
-				<p class="variant-filled-tertiary btn-sm rounded-xl">{stack}</p>
-			{/each}
-			{/if}
-		</div>
-
+	<div class="card-text hidden">
+			<h2 class="text-3xl">{data.name}</h2>
+			<p class="opacity-100">{data.excerpt}</p>
 	</div>
 
 </a>
@@ -35,20 +28,22 @@ import type {Project} from "../types/Project"
     border-radius: 9px;
 		border-style: none;
 	}
-	.card::after{
-		content: "";
-    pointer-events: none;
-    position: absolute;
-    z-index: 1;
-    inset: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.78) 70%);
-	}
 
+
+	.card:hover > .card-text {
+		display: block;
+	}
 .card-text{
 	position: absolute;
+	width: 100%;
+	/* height: 50%; */
 	bottom: 0;
 	z-index: 999 !important;
 	padding: 2rem;
+background: #000;
+opacity: 80%;
+	 /* background: linear-gradient(rgba(0, 0, 0, 0.1) 70%,rgba(0, 0, 0, 0.78) 90%, rgba(0, 0, 0, 0.78) 90%); */
+	align-items: end;
 }
 
 img{

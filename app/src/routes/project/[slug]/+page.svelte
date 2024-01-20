@@ -31,7 +31,7 @@ const components = {};
       </div>
 
 
-      <div class="flex-[3]"><img src={data.image} alt="{data.name}" class=""></div>
+      <div class="flex-[3]"><img src={data.image} alt="{data.name}" class="max-h-full"></div>
     </div>
     {/if}
 
