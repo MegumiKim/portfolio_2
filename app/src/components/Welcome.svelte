@@ -9,7 +9,7 @@
 						<a href="https://github.com/MegumiKim"><i class="fa-brands fa-github"></i></a>
 						<a href="mailto:kimuramegumi"><i class="fa-solid fa-envelope"></i></a>
 					</div>
-					<a href="#about"><i class="fa-solid fa-angles-down"></i></a>
+					<!-- <a href="#about"><i class="fa-solid fa-angles-down"></i></a> -->
 	</div>
 
 </section>

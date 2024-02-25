@@ -8,10 +8,10 @@ const components = {};
   
 </script>
 
-<div class="container h-[85vh] flex justify-center m-auto">
+<div class="container flex justify-center ">
 
     {#if data}
-    <div class="m-auto p-8 max-w-screen-xl md:p-0  mt-20 md:mt-60">
+    <div class="m-auto p-8 max-w-screen-xl md:p-0 mt-20 md:mt-60">
 
       <h1 class="h1 mb-10">{data.name}</h1>
         <div class="flex flex-col md:flex-row gap-5">
@@ -30,8 +30,6 @@ const components = {};
           
           </div>
                 </div>
-          
-          
                 <div class="flex-[3]"><img src={data.image} alt="{data.name}" class="max-h-full"></div>
         </div>
     </div>
