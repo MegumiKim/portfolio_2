@@ -20,8 +20,7 @@ onMount(async () => {
   });
 </script>
 
-
-<div class="mx-auto p-8 space-y-8 mt-40 max-w-screen-lg">
+<div class="container mx-auto p-8 space-y-8 mt-48 max-w-screen-lg">
 	<h1 class="h1">Latest Projects</h1>
 	<section>
 {#if projects.length > 0}

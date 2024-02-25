@@ -9,10 +9,8 @@ import type {Project} from "../types/Project"
 
 <a href={`/project/${data.slug}`} class="flex flex-col rounded-lg w-full aspect-[3/2] mx-auto relative card">
 <img class="w-full h-full overflow-hidden object-cover" src={data.image} alt={data.name}>
-<div class="">
 
-</div>
-	<div class="card-text hidden">
+	<div class="card-text ">
 			<h2 class="text-3xl">{data.name}</h2>
 			<p class="opacity-100">{data.excerpt}</p>
 	</div>
@@ -27,23 +25,26 @@ import type {Project} from "../types/Project"
     overflow: hidden;
     border-radius: 9px;
 		border-style: none;
+		transition: all 1s ease-in-out;
 	}
 
 
 	.card:hover > .card-text {
-		display: block;
+		opacity: 1;
+		transform: translateY(0%);
 	}
 .card-text{
 	position: absolute;
 	width: 100%;
-	/* height: 50%; */
+	height: 100%;
 	bottom: 0;
 	z-index: 999 !important;
 	padding: 2rem;
-background: #000;
-opacity: 80%;
-	 /* background: linear-gradient(rgba(0, 0, 0, 0.1) 70%,rgba(0, 0, 0, 0.78) 90%, rgba(0, 0, 0, 0.78) 90%); */
+	background-color: rgba(10, 13, 15, 0.9);
 	align-items: end;
+	transition: opacity 1s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for opacity and transform */
+	opacity: 0; /* Start with .card-text hidden */
+  transform: translateY(100%); /* Move .card-text up from the bottom */
 }
 
 img{
