@@ -26,15 +26,14 @@ border-bottom: solid 1px white;
 
 }
 
-.fa-angles-down{
+/* .fa-angles-down{
      display: block;
       text-align: center;
       font-size: 2rem;
 			position: absolute;
 			bottom: 60%;
-			/* top: 10%; */
 			left: 50%;
       transform: translateX(-50%);
-    }
+    } */
 
 </style>

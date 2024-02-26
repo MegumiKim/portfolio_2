@@ -22,7 +22,7 @@
     background-image: url('/mountain.jpg');
     /* background-position-y: bottom; */
     background-size: cover;
-    opacity: 50%;
+    opacity: 60%;
     z-index: 0;
   }
 
