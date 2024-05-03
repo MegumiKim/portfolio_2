@@ -1,11 +1,13 @@
 <script>
 	import "../app.css"
 	import Nav from "../components/Nav.svelte";
-import Footer from "../components/Footer.svelte";
-	</script>
+	import Footer from "../components/Footer.svelte";
 
-	<Nav />
-	<main class="overflow-hidden">
-	<slot />
-	</main>
-	<Footer />
+</script>
+
+
+  <Nav />
+  <div class="main-content">
+    <slot />
+  </div>
+  <Footer />

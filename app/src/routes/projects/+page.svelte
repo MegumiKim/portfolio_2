@@ -11,7 +11,6 @@ onMount(async () => {
     try {
       const data = await getProjects();
       if (data) {
-        console.log(data[0]);
         projects = data;
       }
     } catch (error) {
@@ -21,7 +20,7 @@ onMount(async () => {
 </script>
 
           
-<div class="container mx-auto p-8 space-y-8 max-w-screen-lg md:p-0 mt-20 md:mt-60">
+<div class="container mx-auto p-8 space-y-8 max-w-screen-lg md:p-0 mt-5 md:mt-20">
 	<h1 class="h1">Latest Projects</h1>
 	<section>
 {#if projects.length > 0}
@@ -30,8 +29,6 @@ onMount(async () => {
       <Card data={project}/>
     {/each}
   </div>
-{:else}
-<p>No projects found.</p>
 {/if}
 	</section>
 </div>

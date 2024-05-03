@@ -14,9 +14,10 @@ export const client = createClient({
 
 export async function getProjects(): Promise<Project[]> {
   return await client.fetch(
-    groq`*[_type == 'project']{
+    groq`*[_type == 'project'] | order(projectDate desc){
       _id,
       _createdAt,
+      projectDate,
       name,
       "slug":slug.current,
       'image':image.asset->url,

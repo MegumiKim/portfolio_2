@@ -17,6 +17,8 @@
         <p class="stack">CSS</p>
         <p class="stack">JavaScript</p>
         <p class="stack">TypeScript</p>
+        <p class="stack">SQL</p>
+        <p class="stack">Python</p>
       </div>
     </div>
     <div class="resume_info">
@@ -24,15 +26,26 @@
       <div class="stacks">
         <p class="stack">React</p>
         <p class="stack">Svelte</p>
-        <p class="stack">TailwindCSS</p>
-        <p class="stack">Bootstrap</p>
+        <p class="stack">Sass</p>
       </div>
     </div>
     <div class="resume_info">
-      <h4 class="">Others</h4>
+      <h4 class="">DBs, CMS, APIs</h4>
       <div class="stacks">
-        <p class="stack">REST APIs</p>
+        <p class="stack">Postgres</p>
+        <p class="stack">REST API</p>
         <p class="stack">Sanity</p>
+        <p class="stack">Express</p>
+      </div>
+    </div>
+    <div class="resume_info">
+      <h4 class="">Tools</h4>
+      <div class="stacks">
+        <p class="stack">GitHub</p>
+        <p class="stack">GitHub Action</p>
+        <p class="stack">Postman</p>
+        <p class="stack">Cypress</p>
+        <p class="stack">Jest</p>
       </div>
     </div>
 
@@ -60,6 +73,7 @@
   row-gap: 0.2rem;
   margin-bottom: 1rem;
 }
+
 .stack {
   background: rgb(45, 80, 132);
   padding: 0.2rem 1rem;
@@ -78,7 +92,9 @@ section{
         font-size: 1.5rem;
       }
   
-
+      .resume_info {
+        margin-top: 2em;
+      }
       .resume_info > h4{
         margin-bottom: 1rem;
       }

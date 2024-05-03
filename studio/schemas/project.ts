@@ -35,6 +35,15 @@ export const project = {
       rows: 4,
     },
     {
+      name: 'projectDate',
+      title: 'Project Date',
+      type: 'date',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        calendarTodayLabel: 'Today',
+      },
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

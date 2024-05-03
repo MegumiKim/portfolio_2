@@ -1,9 +1,11 @@
 <script>
-  	import { page } from '$app/stores';
-import { onMount } from 'svelte';
-let showMenu = false;
+  import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  let showMenu = false;
 	let currentPage = $page.route.id;
-  
+  let isHomePage = false;
+  $: isHomePage = $page.url.pathname === '/';
+
 function toggleMenu(){
   showMenu=!showMenu
 }
@@ -18,28 +20,92 @@ function toggleMenu(){
 	});
 </script>
 
-<div class=" z-10 absolute top-8 w-full px-8 sm:p-0 {currentPage === '/' ? '': "bg-[#15171f]"}">
-  <button on:click={toggleMenu} class="sm:hidden">
+<header class={isHomePage ? "is-home":""}>
+  <button on:click={toggleMenu} class="menu-btn">
     {#if showMenu}
     <i class="fa-solid fa-xmark text-2xl"></i>
   {:else}
     <i class="fa-solid fa-bars text-2xl"></i>
   {/if}
   </button>
-  <nav class="z-999 gap-x-7 gap-y-3 justify-center {showMenu? 'grid grid-cols-2 flex-col pt-4 w-full mx-0': 'hidden'} sm:flex sm:flex-row rounded rounded-2" >
-    <li class={currentPage === '/' ? 'current' : ''}><a href="/" on:click={toggleMenu}>HOME</a></li>
-    <li class={currentPage === '/projects' ? 'current' : ''}><a href="/projects" on:click={toggleMenu}>PROJECTS</a></li>
-    <li class={currentPage === '/contact' ? 'current' : ''}><a  href="/contact" on:click={toggleMenu}>CONTACT</a></li>
-    <li ><a href="https://cv.megumi.no/" target="_blank" on:click={toggleMenu}>CV</a></li>
+  <nav class={showMenu? "show":""} >
+    <ul>
+      <li class={currentPage === '/' ? 'current' : ''}><a href="/" on:click={toggleMenu}>HOME</a></li>
+      <li class={currentPage === '/projects' ? 'current' : ''}><a href="/projects" on:click={toggleMenu}>PROJECTS</a></li>
+      <li class={currentPage === '/contact' ? 'current' : ''}><a  href="/contact" on:click={toggleMenu}>CONTACT</a></li>
+      <li ><a href="https://cv.megumi.no/" target="_blank" on:click={toggleMenu}>CV</a></li>
+    </ul>
   </nav>
-</div>
+</header>
 
 <style>
-  nav{
-    /* transition: all 1s linear; */
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 1rem 0;
+
+
+
+/* Base styles for header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 10px 20px;
+  color: white;
+  z-index: 999;
+}
+
+  
+.is-home{
+  
+position: absolute;
+right: 0;
+}
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  display: block; 
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-btn .fa-xmark {
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Vertical layout by default */
+}
+
+nav ul li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+nav ul li a {
+  /* color: white; */
+  text-decoration: none;
+}
+
+  nav {
+    display: none; 
+    position:fixed;
+    top: 0px;
+    right:0 ;
+    padding: 0.5em 1.5em;
+    background: #fff;
+    color: black;
+    z-index: 10;
+    padding-top: 50px;
+border-radius: 16px;
+  }
+
+
+  nav.show {
+    display: block; 
   }
 
   li.current {
@@ -53,7 +119,42 @@ function toggleMenu(){
 
   li:hover{
    color: rgb(227, 208, 38);
+  } 
+/* Larger screens */
+@media (min-width: 500px) {
+
+  header{
+ 
+    align-items: center;
   }
+  .menu-btn {
+    display: none; /* Hide the menu button on larger screens */
+  }
+
+  nav ul {
+    flex-direction: row; /* Horizontal layout for nav items */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Horizontal spacing between menu items */
+  }
+
+  nav {
+    display: flex; /* Ensure the nav is always visible */
+    position: static;
+    color: #fff;
+    background:none;
+  }
+
+  .is-home{
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+
+
 
 
 </style>
