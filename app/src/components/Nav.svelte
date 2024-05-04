@@ -47,18 +47,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: end;
+  align-items: flex-end;
   padding: 10px 20px;
   color: white;
   z-index: 999;
+  position: absolute;
+right: 0;
 }
 
   
-.is-home{
-  
-position: absolute;
-right: 0;
-}
+
 .menu-btn {
   font-size: 24px;
   background: none;
@@ -69,9 +67,7 @@ right: 0;
   z-index: 1000;
 }
 
-.menu-btn .fa-xmark {
-  color: black;
-}
+
 
 nav ul {
   list-style: none;
@@ -92,14 +88,9 @@ nav ul li a {
 
   nav {
     display: none; 
-    position:fixed;
-    top: 0px;
-    right:0 ;
     padding: 0.5em 1.5em;
     background: #fff;
     color: black;
-    z-index: 10;
-    padding-top: 50px;
 border-radius: 16px;
   }
 
@@ -121,11 +112,16 @@ border-radius: 16px;
    color: rgb(227, 208, 38);
   } 
 /* Larger screens */
-@media (min-width: 500px) {
+@media (min-width: 700px) {
 
   header{
  
+    top: 30px;
+    margin: auto;
+    width: 100%;
+    right: unset;
     align-items: center;
+
   }
   .menu-btn {
     display: none; /* Hide the menu button on larger screens */
@@ -141,16 +137,12 @@ border-radius: 16px;
 
   nav {
     display: flex; /* Ensure the nav is always visible */
-    position: static;
     color: #fff;
     background:none;
+
   }
 
-  .is-home{
-  right: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 }
 
 

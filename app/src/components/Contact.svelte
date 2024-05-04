@@ -38,6 +38,7 @@
 
         // Handle the response as needed
       } catch (error) {
+        error = "Failed to submit the form. Please contact by email!"
         console.error('Error submitting the form:', error);
       }finally{
         name = '';
@@ -58,11 +59,4 @@
         <button type="submit" class=" mt-3 btn-xl variant-outline-warning rounded-xl hover:variant-filled-warning">Send</button>
       </form>
 
-      <!-- <form class="flex flex-col gap-2 flex-1" action="process_form.php" method="POST">
-
-        <label for=""><span>Name</span><input class="input " type="text" name="name" required></label>
-        <label for=""><span>Email</span><input class="input" type="email" name="email" ></label>
-        <label for=""><span>Message</span><textarea class="textarea rounded-lg" name="message" cols="30" rows="10"></textarea></label>
-        <button type="submit" class="btn-xl variant-outline-warning rounded-xl">Send</button>
-      </form> -->
 
