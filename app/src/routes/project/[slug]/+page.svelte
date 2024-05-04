@@ -11,7 +11,7 @@ const components = {};
 <div class="container flex justify-center">
 
     {#if data}
-    <div class="m-auto p-8 max-w-screen-xl md:p-0 mt-20 md:mt-40">
+    <div class="m-auto p-8 max-w-screen-xl ">
       <h1 class="h1 mb-10">{data.name}</h1>
         <div class="flex flex-col md:flex-row gap-10">
           <div class="flex-[2] space-y-5 ">

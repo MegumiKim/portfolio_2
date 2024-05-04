@@ -28,6 +28,7 @@ h1{
 
 .container{
   padding: 1em;
+  padding-top: 50px;
   min-height: 85vh;
 }
 
